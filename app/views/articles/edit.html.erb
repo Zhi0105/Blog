@@ -1,0 +1,48 @@
+<div class="edit-main">
+    <div class="form-container">
+        <%= form_with scope: :article, url: article_update_path(@article.id), method: "put",local: true, data: { turbo_confirm: 'Are you sure ?' } do |f| %>
+
+                <%
+=begin%>
+ <p>
+                    <% if @article.errors.any? %>
+                        <ul>
+                            <% @article.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                            <% end %>
+                        </ul>
+                    <% end %>
+                </p> 
+
+<%
+=end%>
+                <div class="form-header">
+                    <h1>Modify article:</h1>
+                </div><br />
+
+                <div class="form-article">
+                    <p>
+                        <%= f.label :title %><br />
+                        <%= f.text_field :name %>
+                    </p><br />
+                    
+                    <p>
+                        <%= f.label :content %><br />
+                        <%= f.text_area :body %>
+                    </p><br />
+                </div>
+                
+                <div class="form-footer">
+                    <p>
+                        <%= f.submit 'Update' %>
+                        <%= f.button "Delete", formmethod: :delete %>
+                    </p><br />
+                </div>
+
+            <% end %>
+    </div><br />
+        
+                <p>
+                    <%= link_to 'Back to articles', articles_path %>
+                </p><br />
+</div>

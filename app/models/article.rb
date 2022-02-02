@@ -1,4 +1,4 @@
 class Article < ApplicationRecord
-    validates :name, pressence: true, uniqueness: true
-    validates :body, pressence: true, length: { minimum: 5, maximum: 20 } 
+    validates :name, presence: true, uniqueness: true
+    validates :body, presence: true, length: { minimum: 5, maximum: 20 } 
 end

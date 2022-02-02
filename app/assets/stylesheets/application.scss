@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family : Arial, Helvetica, sans-serif;
+    background: #4B79A1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    
+
+    // Article index page
+    .article_index_main{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        table{
+            width:80vw;
+            border-collapse: collapse;
+
+            td, th{
+                border: 1px solid #ddd;
+                padding:8px;
+            }
+            th{
+                background: rgb(71, 161, 202);
+            }
+            
+            tbody{
+                a, td:nth-child(4){
+                    text-decoration:none;
+                    text-align: center;
+                    padding:10px;
+                    color:white;
+                }
+                tr:hover{
+                    background:gray;
+                    color:black;
+                }
+                
+                a{
+                    background:rgb(114, 194, 114);
+                    padding:5px 16px 5px 16px;
+                    border-radius: 4px;
+                    
+                }
+                a:hover{
+                    background:rgb(218, 109, 109);
+                }
+            }
+            
+        }
+    }
+
+    .new_article{
+        color:white;
+        text-decoration:none;
+        background:rgb(114, 194, 114);
+        padding:5px 16px 5px 16px;
+        border-radius: 4px;
+        
+    }
+    .new_article:hover{
+        background:rgb(218, 109, 109);
+    }
+
+
+    .new-main{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top:50px;
+
+            .form-container{
+                border: 1px solid white;
+                border-radius: 5px;
+                padding:20px;
+                min-width: 65%;
+                *{
+                    padding-bottom:7px;
+                }
+
+                label{
+                    font-size:20px;
+                }
+                input[type='text']{
+                    width:100%;
+                    padding:10px;
+                    border-radius: 4px;
+                }
+                textarea{
+                    width:100%;
+                    height:25vh;
+                    padding:30px;
+                    font-family:Arial, Helvetica, sans-serif;
+                    border-radius:5px;
+                }
+            }
+
+            .form-footer{
+                display:flex;
+                justify-content: center;
+
+                input[type='submit']{
+                    padding:10px;
+                    background:rgb(114, 194, 114);
+                    border-radius:5px;
+                    color:white;
+                    border-style: none;
+                }
+                a{
+                    text-decoration:none;
+                    padding:8px;
+                    background:rgb(114, 194, 114);
+                    border-radius:5px;
+                    color:white;
+                }
+                input[type='submit']:hover, a:hover{
+                    background:rgb(218, 109, 109);
+                }
+            }
+            
+    }
+        .edit-main{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top:50px;
+
+                .form-container{
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    padding:20px;
+                    min-width: 65%; 
+
+                    *{
+                        padding-bottom:7px;
+                    }
+    
+                    label{
+                        font-size:20px;
+                    }
+                    input[type='text']{
+                        width:100%;
+                        padding:10px;
+                        border-radius: 4px;
+                    }
+                    textarea{
+                        width:100%;
+                        height:25vh;
+                        padding:30px;
+                        font-family:Arial, Helvetica, sans-serif;
+                        border-radius:5px;
+                    }
+                }
+
+                .form-footer{
+                    display:flex;
+                    justify-content: center;
+    
+                    input[type='submit'], button{
+                        padding:10px;
+                        background:rgb(114, 194, 114);
+                        border-radius:5px;
+                        color:white;
+                        border-style: none;
+                    }
+                    input[type='submit']:hover, button:hover{
+                        background:rgb(218, 109, 109);
+                    }
+                }
+                a{
+                    text-decoration:none;
+                    padding:8px;
+                    background:rgb(114, 194, 114);
+                    border-radius:5px;
+                    color:white;
+                }
+                a:hover{
+                    background:rgb(218, 109, 109);
+                }
+        }
+
+}

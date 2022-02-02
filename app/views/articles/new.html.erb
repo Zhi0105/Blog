@@ -1,0 +1,38 @@
+<div class="new-main">
+    <div class="form-container">
+        <%= form_with scope: :article, url: article_create_path , local: true, data: {turbo: false} do |f| %>
+            <div class="form-header">
+                <h1>New article:</h1>
+            </div><br />
+                <div>
+                    <p>
+                        <% if @article.errors.any? %>
+                                <ul classs="validation-message">
+                                    <% @article.errors.full_messages.each do |message| %>
+                                        <li style="list-style-type:none; color:red;"><%= message %></li>
+                                    <% end %>
+                                </ul>
+                        <% end %>
+                    </p><br />
+                </div>
+            <div class="form-article">
+                <p>
+                <%= f.label :title %><br />
+                <%= f.text_field :name %>
+                </p><br />
+            
+                <p>
+                    <%= f.label :content %><br />
+                    <%= f.text_area :body, placeholder: "Any description?" %>
+                </p><br />
+            </div>
+            
+            <div class="form-footer">
+                <p>
+                    <%= f.submit 'Add article'%>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Back to articles', articles_path %>
+                </p><br />
+            </div>
+    
+    <% end %>
+    </div>
+</div>
