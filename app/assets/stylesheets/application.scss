@@ -1,3 +1,5 @@
+@import url('./actiontext.css');
+
 *{
     margin: 0;
     padding: 0;
@@ -18,9 +20,9 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
+        
         table{
-            width:80vw;
+            width:60vw;
             border-collapse: collapse;
 
             td, th{
@@ -32,7 +34,7 @@ body{
             }
             
             tbody{
-                a, td:nth-child(4){
+                a, td{
                     text-decoration:none;
                     text-align: center;
                     padding:10px;
@@ -57,6 +59,49 @@ body{
         }
     }
 
+    .show-main{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .container{
+            margin-top:15vh;
+            min-width: 50%;
+            max-width: 70%;
+            height: auto;
+            background:#e4e4e4;
+            color:black;
+            border-radius:5px;
+
+            .title, .body{
+                padding:15px;
+            }
+            .title{
+                background: rgb(71, 161, 202);
+                color:white;
+            }
+            // .body{
+            //     p{
+            //         text-indent: 50px;
+            //         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    
+            //     }
+            // }
+        }
+
+        a{
+            text-decoration:none;
+            padding:8px;
+            background:rgb(114, 194, 114);
+            border-radius:5px;
+            color:white;
+        }
+        a:hover{
+            background:rgb(218, 109, 109);
+        }
+    }
+
+    //NEW ARTICLE PAGE
     .new_article{
         color:white;
         text-decoration:none;
@@ -81,7 +126,8 @@ body{
                 border: 1px solid white;
                 border-radius: 5px;
                 padding:20px;
-                min-width: 65%;
+                width: 90%;
+                
                 *{
                     padding-bottom:7px;
                 }
@@ -94,12 +140,10 @@ body{
                     padding:10px;
                     border-radius: 4px;
                 }
-                textarea{
-                    width:100%;
-                    height:25vh;
-                    padding:30px;
-                    font-family:Arial, Helvetica, sans-serif;
-                    border-radius:5px;
+                
+                trix-editor{
+                    background: #e4e4e4;
+                    color:black;
                 }
             }
 
@@ -127,6 +171,8 @@ body{
             }
             
     }
+
+        //EDIT PAGE
         .edit-main{
             display:flex;
             justify-content: center;
@@ -138,7 +184,7 @@ body{
                     border: 1px solid white;
                     border-radius: 5px;
                     padding:20px;
-                    min-width: 65%; 
+                    width: 90%; 
 
                     *{
                         padding-bottom:7px;
@@ -152,12 +198,10 @@ body{
                         padding:10px;
                         border-radius: 4px;
                     }
-                    textarea{
-                        width:100%;
-                        height:25vh;
-                        padding:30px;
-                        font-family:Arial, Helvetica, sans-serif;
-                        border-radius:5px;
+
+                    trix-editor{
+                        background: #e4e4e4;
+                        color:black;
                     }
                 }
 

@@ -1,0 +1,13 @@
+<div class="show-main">
+    <div class="container">
+        <div class="title">
+            <h2><%= @article.name %></h2>
+        </div>
+        <div class="body">
+            <%= @article.body %>
+        </div>
+    </div><br /><br />
+    <div>
+        <%= link_to 'Back to article list', articles_path %>
+    </div>
+</div>
